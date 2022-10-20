@@ -8,7 +8,7 @@ locals {
   cluster_role = try(aws_iam_role.this[0].arn, var.iam_role_arn)
 }
 
-# for migration
+# for v17-v18 migration
 moved {
   from = module.eks.aws_iam_role.cluster[0]
   to   = module.eks.aws_iam_role.this[0]
