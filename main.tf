@@ -10,8 +10,8 @@ locals {
 
 # for v17-v18 migration
 moved {
-  from = module.eks.aws_iam_role.cluster[0]
-  to   = module.eks.aws_iam_role.this[0]
+  from = aws_iam_role.cluster[0]
+  to   = aws_iam_role.this[0]
 }
 
 ################################################################################
